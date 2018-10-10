@@ -1,0 +1,75 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark\nimport scala.math.randon\nval slices \u003d 6\nval n \u003d 100000L * slices\nval count \u003d spark.sparkContext.parallelize(1 until n, slices).map { i \u003d\u003e\n    val x \u003d random * 2 - 1\n    val y \u003d random * 2 - 1\n    if (x*x + y*y \u003c\u003d 1) 1 else 0\n}.reduce(_ + _)\nprintln(s\"Pi is roughly ${4.0 * count / (n - 1)}\")",
+      "user": "mpeshave@gannett.com",
+      "dateUpdated": "Oct 10, 2018 3:15:47 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1539183719012_-339713402",
+      "id": "20181010-150159_1509328672_q_2AP2PMD8WU1539183718",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "\n\n\n\u003cconsole\u003e:25: error: object randon is not a member of package math\n       import scala.math.randon\n              ^\n"
+      },
+      "dateCreated": "Oct 10, 2018 3:01:59 PM",
+      "dateSubmitted": "Oct 10, 2018 3:15:47 PM",
+      "dateStarted": "Oct 10, 2018 3:15:51 PM",
+      "dateFinished": "Oct 10, 2018 3:16:34 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "text": "",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1539183958742_-116049529",
+      "id": "20181010-150558_2097773393_q_2AP2PMD8WU1539183718",
+      "dateCreated": "Oct 10, 2018 3:05:58 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 1000
+    }
+  ],
+  "name": "TestSparkNoteBook",
+  "id": "2AP2PMD8WU1539183718",
+  "angularObjects": {
+    "2DQFUXRKJ694901535644901883:shared_process": [],
+    "2DPRSGKAV694901535644901876:shared_process": [],
+    "2DQ4MD1XS694901535644901886:shared_process": [],
+    "2DR6GDVZT694901535644901801:shared_process": []
+  },
+  "config": {
+    "isDashboard": false,
+    "defaultLang": ""
+  },
+  "info": {},
+  "source": "FCN"
+}
